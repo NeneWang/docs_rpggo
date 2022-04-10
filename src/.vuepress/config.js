@@ -39,8 +39,8 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Items',
-        link: '/items/'
+        text: 'Collectables',
+        link: '/collectables/'
       },
       {
         text: 'Events',

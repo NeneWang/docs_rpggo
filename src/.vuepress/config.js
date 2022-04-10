@@ -55,7 +55,6 @@ module.exports = {
         link: 'https://wngnelson.com/'
       }
     ],
-    sidebar: []
   },
 
   /**

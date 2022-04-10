@@ -44,11 +44,11 @@ module.exports = {
       },
       {
         text: 'Events',
-        link: '/config/'
+        link: '/events/'
       },
       {
         text: 'Enemies',
-        link: '/config/'
+        link: '/enemies/'
       },
       {
         text: 'Play the game!',

@@ -22,6 +22,8 @@ location_list = ['in a Castle', 'in a Village', 'at a Lake', 'in a Grove', 'at a
 
 race_list = ['An aristocrat', 'A noblewoman', 'A sage', 'A priest', 'An adventurer', 'An elf', 'A lady', 'A dwarf', 'A merchant', 'A goblin', 'A giant', 'An angel', 'A dragon', 'A demon']
 
+action_list = ['seek', 'capture', 'find', 'recover', 'hunt down', 'discover', 'investigate', 'escort', 'expose']
+
 #text = "Curiouser & Curiouser with Kai Alcé*, Rissa Garcia"
 #location = "Green-Wood Cemetery"
 #topic = "business"
@@ -39,8 +41,8 @@ def extractNN(postag):
     NN = []
     cur_NN = ""
     for cur_tag in postag:
-        if cur_tag[1] == "NN" and cur_tag[0] != "thi" and not "," in cur_tag[0]:
-            cur_NN = cur_NN + cur_tag[0] + " "
+        if "NN" in cur_tag[1] and cur_tag[0] != "thi" and not "," in cur_tag[0]:
+            cur_NN = cur_NN + cur_tag[0].capitalize() + " "
             selected_NN = cur_NN
         else:
             if len(cur_NN) != 0:
@@ -48,15 +50,25 @@ def extractNN(postag):
             cur_NN = ""
     NN.append(cur_NN)
     if (len(NN) == 0):
-        NN.append("flower ")
+        NN.append("Flower ")
     return max(NN, key=len)
+    
+def extractlNN(postag):
+    selected_NN = ""
+    for cur_tag in postag:
+        if "NN" in cur_tag[1] and not "," in cur_tag[0]:
+            if len(selected_NN) < len(cur_tag[0]):
+                selected_NN = cur_tag[0]
+    if selected_NN == "":
+        selected_NN = "Nowhere"
+    return selected_NN
 
 def extractLocation(topic):
     index = topic_list.index(topic)
     return location_list[index]
 
-def questGenerator(NN, location, race):
-    return race + " asks you to seek " + NN + location + "."
+def questGenerator(NN, location, race, action):
+    return race + " asks you to " + action + " " + NN + location + "."
     
 def latlngGenerator(location):
     geolocator = Nominatim(user_agent="geoapi")
@@ -72,13 +84,19 @@ def processEvent(event):
     text = event[1][1:-2]
     location = event[3][1:-2]
     full_location = event[4][1:-1]
+    
+    location_token = re.split("\s+", location.rstrip())
+    location_postag = pos_tag(location_token)
+    location = extractlNN(location_postag)
+    
     text_token = re.split("\s+", text.rstrip())
     text_token = stem_lemmatization(text_token)
     postag = pos_tag(text_token)
     selected_NN = extractNN(postag)
     selected_location = extractLocation(topic) + " called " + location
     selected_race = random.choice(race_list)
-    quest = questGenerator(selected_NN, selected_location, selected_race)
+    selected_action = random.choice(action_list)
+    quest = questGenerator(selected_NN, selected_location, selected_race, selected_action)
     address = latlngGenerator(full_location)
     
     result = {
@@ -121,6 +139,3 @@ def main():
 if __name__ == "__main__":
     main()
     
-    
-
-

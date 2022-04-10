@@ -2,7 +2,7 @@
 home: true
 heroImage: https://www.drivethrurpg.com/images/13882/268556.jpg
 tagline: RPG GO wiki
-actionText: Quick Start →
+actionText: Play the game →
 actionLink: /guide/
 features:
 - title: Feature 1 Title

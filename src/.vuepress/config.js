@@ -39,7 +39,15 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Config',
+        text: 'Items',
+        link: '/items/'
+      },
+      {
+        text: 'Events',
+        link: '/config/'
+      },
+      {
+        text: 'Enemies',
         link: '/config/'
       },
       {

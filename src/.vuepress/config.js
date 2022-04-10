@@ -47,12 +47,38 @@ module.exports = {
         link: '/events/'
       },
       {
-        text: 'Enemies',
-        link: '/enemies/'
-      },
-      {
         text: 'Play the game!',
         link: 'https://wngnelson.com/'
+      }
+    ],
+  },
+
+  sidebar: {
+    '/guide/': [
+      {
+        title: 'Guide',
+        collapsable: false,
+        children: [
+          '',
+          'dungeon',
+          'play'
+        ]
+      }
+    ],
+    '/collectables/': [
+      {
+        title: 'collectables',
+        collapsable: false,
+        children: [
+          '',
+          'where-to-find',
+        ]
+      }
+    ],
+    '/events/': [
+      {
+        title: 'events',
+        collapsable: false,
       }
     ],
   },
@@ -62,11 +88,6 @@ module.exports = {
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom', ["vuepress-plugin-auto-sidebar", {
-      sidebarDepth: 1,
-      collapse: {
-        open: true,
-      },
-    }]
+    '@vuepress/plugin-medium-zoom',
   ]
 }

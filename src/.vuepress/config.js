@@ -1,10 +1,11 @@
 const { description } = require('../../package')
 
+
 module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: 'RPG GO Wiki',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -31,7 +32,7 @@ module.exports = {
     editLinks: false,
     docsDir: '',
     editLinkText: '',
-    lastUpdated: false,
+    lastUpdated: true,
     nav: [
       {
         text: 'Guide',
@@ -42,22 +43,11 @@ module.exports = {
         link: '/config/'
       },
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Play the game!',
+        link: 'https://wngnelson.com/'
       }
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
-        }
-      ],
-    }
+    sidebar: []
   },
 
   /**
@@ -65,6 +55,11 @@ module.exports = {
    */
   plugins: [
     '@vuepress/plugin-back-to-top',
-    '@vuepress/plugin-medium-zoom',
+    '@vuepress/plugin-medium-zoom', ["vuepress-plugin-auto-sidebar", {
+      sidebarDepth: 1,
+      collapse: {
+        open: true,
+      },
+    }]
   ]
 }

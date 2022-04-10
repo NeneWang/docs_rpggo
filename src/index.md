@@ -1,7 +1,7 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: rpggo wiki
+heroImage: https://www.drivethrurpg.com/images/13882/268556.jpg
+tagline: RPG GO wiki
 actionText: Quick Start →
 actionLink: /guide/
 features:
@@ -11,5 +11,5 @@ features:
   details: Feature 2 Description
 - title: Feature 3 Title
   details: Feature 3 Description
-footer: Made by Nelson with ❤️
+footer: RPG + AR = ❤️
 ---

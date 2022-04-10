@@ -1,0 +1,60 @@
+[
+    {
+        "topic": "science-and-tech",
+        "title": "Towards a NYC DAO",
+        "location": "Rise New York, New York, NY",
+        "quest": "A priest asks you to escort Dao in a Town called Rise.",
+        "target": [42.65831195, -73.78536065]
+    },
+    {
+        "topic": "film-and-media",
+        "title": "KIDS EASTER JAMBOREE ON THE SEA",
+        "location": "140 58th St, Brooklyn, NY",
+        "quest": "An elf asks you to investigate Kid Easter Jambore in a Dungeon",
+        "target": [40.64530085714286, -74.02296442857143]
+    },
+    {
+        "topic": "music",
+        "title": "KOSTUME KULT'S HORNED BALL 2022: LIGHTBRINGER",
+        "location": "The Bell House, Brooklyn, NY",
+        "quest": "A merchant asks you to capture Kostum Kult at a Lake called Bell.",
+        "target": [40.6737308, -73.99167579050734]
+    },
+    {
+        "topic": "health",
+        "title": "2022 Sex Expo New York",
+        "location": "Brooklyn Expo Center, Brooklyn, NY",
+        "quest": "A dragon asks you to recover York in a Grove called Brooklyn.",
+        "target": [40.72815235, -73.95779592375644]
+    },
+    {
+        "topic": "food-and-drink",
+        "title": "Bronx Night Market",
+        "location": "Fordham Plaza, The Bronx, NY",
+        "quest": "A merchant asks you to discover Night Market in a Village called Fordham.",
+        "target": [40.86077495, -73.8911281555327]
+    },
+    {
+        "topic": "travel-and-outdoor",
+        "title": "Exploring the Trees of the Arboretum",
+        "location": "F. R. Newman Arboretum, Ithaca, NY",
+        "quest": "An adventurer asks you to recover Arboretum in a Wilderness called Arboretum.",
+        "target": [42.45240955, -76.4575847823171]
+    },
+    {
+        "topic": "business",
+        "title": "Tech Professionals  After Work Happy Hour",
+        "location": "230 Fifth Rooftop Bar, New York, NY",
+        "quest": "A noblewoman asks you to seek Tech Profession in a Castle called Rooftop.",
+        "target": [40.7439412, -73.988134]
+    },
+    {
+        "topic": "charity-and-causes",
+        "title": "The Texas Chili Cook Off 2022 - New York Chapter",
+        "location": "Industry City, Brooklyn, NY",
+        "quest": "A sage asks you to find York Chapter at a Sea called Industry.",
+        "target": [40.65662195, -74.00733528623371]
+    }
+]
+
+   
